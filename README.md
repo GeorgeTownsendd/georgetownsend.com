@@ -1,2 +1,2 @@
 # GeorgeTownsendd.github.io
-Static Page for georgetownsend.com
+Code for georgetownsend.com
