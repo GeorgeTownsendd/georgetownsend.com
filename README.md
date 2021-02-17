@@ -1,2 +1,2 @@
-# GeorgeTownsendd.github.io
-Code for georgetownsend.com
+# georgetowsnend.com
+Source for georgetownsend.com
