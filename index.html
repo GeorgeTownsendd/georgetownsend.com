@@ -5,6 +5,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
@@ -23,12 +25,31 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 40px;
-      padding: 40px 0;
+      font-size: 42px;
+      padding: 40px 0 20px;
+      position: relative;
+      font-weight: 700;
+      color: #222;
+    }
+
+    h1:after {
+      content: "Geospatial Developer";
+      display: block;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: normal;
+      color: #555;
+      margin-top: 5px;
+      text-transform: none;
     }
 
     h1 span {
-      color: #0000ff;
+      color: #0056b3;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0;
     }
 
     p {
@@ -38,91 +59,162 @@
       padding: 20px 0;
     }
 
+    .summary {
+      max-width: 75%;
+      margin: 0 auto;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: justify;
+    }
+
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #dddddd, transparent);
+      margin: 50px auto 40px;
+      width: 80%;
+    }
+
     .project-list {
-    display: flex;
-    justify-content: center; /* center the cards */
+      display: flex;
+      justify-content: center; /* center the cards */
+      flex-wrap: nowrap;
+      overflow-x: auto; /* allow horizontal scrolling if needed */
+      padding: 10px 0 30px 0;
     }
 
     .project-list .card {
-    width: calc(33.33% - 20px);  /* divide the width into three cards with a 10px margin */
-    margin: 10px;
-    border: 1px solid #dddddd;
-    padding: 20px;
-    text-align: center;
+      width: calc(25% - 20px);  /* divide the width into four cards with a 10px margin */
+      margin: 10px;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fafafa;
+    }
+
+    .project-list .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     .project-list .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .project-list .card a {
-      font-size: 18px;
-      color: blue;
+      font-size: 16px;
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #0056b3;
+      border-radius: 4px;
+    }
+
+    .project-list .card a:hover {
+      background-color: #0056b3;
+      color: white;
     }
 
     .contact-section {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    }
-    .contact-section p{
-    margin:0; /* remove margins */
-    padding:5px 0; /* reduce the padding */
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
+      border-top: 1px solid #dee2e6;
     }
 
     .contact-section h2 {
       font-size: 24px;
-      margin-bottom: 20px;
+      margin: 0 0 15px 0;
+      color: #343a40;
     }
 
-    .contact-section a {
-      font-size: 18px;
-      color: blue;
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
     }
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-size: 12px; /*small text */
-    padding: 10px;
-}
+
+    .contact-links a {
+      font-size: 16px;
+      color: #0056b3;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-links a i {
+      margin-right: 8px;
+    }
+
+    .contact-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      color: #0033a0;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      font-size: 12px; /*small text */
+      padding: 10px;
+    }
 
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>George Townsend: <span>Surveying + Software</span></h1>
+    <h1>George Townsend</h1>
     <img src="generated_image.png" alt="An AI generated picture of a globe and semi-hallucinated geospatial things">
-    <p>Undergrad surveying student with an interest in open source software and all things geospatial. </p>
+    <p class="summary">Geospatial professional with expertise in GNSS technology, spatial data processing, and Python development
+across industry and academia. Passionate about the intersection of geography, measurement, and technology.</p>
 
-    <h2>Pinned Projects</h2>
+    <div class="section-divider"></div>
+
+    <h2>Projects</h2>
     <div class="project-list">
       <div class="card">
         <h3>Explore the Mandelbrot and Julia sets with Python and PyGame</h3>
-        <a href="https://github.com/GeorgeTownsendd/cudabrot" target="_blank">Github Link <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://github.com/GeorgeTownsendd/cudabrot" target="_blank">Github <i class="fab fa-github"></i></a>
       </div>
       <div class="card">
         <h3>Least squares survey network adjustment in Python</h3>
-        <a href="https://github.com/GeorgeTownsendd/SurveyPy" target="_blank">Github Link <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://github.com/GeorgeTownsendd/SurveyPy" target="_blank">Github <i class="fab fa-github"></i></a>
       </div>
       <div class="card">
         <h3>Archive, visualise, and analyse Reddit /r/place events</h3>
-        <a href="https://github.com/GeorgeTownsendd/PlaceTimelapseTool" target="_blank">Github Link <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://github.com/GeorgeTownsendd/PlaceTimelapseTool" target="_blank">Github <i class="fab fa-github"></i></a>
       </div>
       <div class="card">
         <h3>Print navigation charts using OpenStreetMap and LaTeX</h3>
-        <a href="https://http.cat/401" target="_blank">Github Link <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://http.cat/401" target="_blank">Github <i class="fab fa-github"></i></a>
       </div>
     </div>
 
     <div class="contact-section">
       <h2>Contact Me</h2>
-      <p><a href="mailto:george@georgetownsend.com">george@georgetownsend.com</a></p>
-      <p><a href="http://www.georgetownsend.com/resume" target="_blank">georgetownsend.com/resume</a></p>
+      <div class="contact-links">
+        <a href="mailto:george@georgetownsend.com"><i class="fas fa-envelope"></i> george@georgetownsend.com</a>
+        <a href="http://www.georgetownsend.com/resume" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+      </div>
     </div>
   </div>
 </body>
 </html>
-
