@@ -1,222 +1,120 @@
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>George Townsend: Geospatial Developer</title>
+  <title>George Townsend — Geodesist</title>
+  <meta name="description" content="George Townsend — geodesist and postgraduate researcher in GNSS Interferometric Reflectometry at the University of Newcastle.">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / Facebook / Slack / LinkedIn / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://georgetownsend.com/">
+  <meta property="og:title" content="George Townsend — Geodesist">
+  <meta property="og:description" content="Geodesist and postgraduate researcher in GNSS Interferometric Reflectometry at the University of Newcastle.">
+  <meta property="og:image" content="https://georgetownsend.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="George Townsend — Geodesy &middot; GNSS-IR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="George Townsend — Geodesist">
+  <meta name="twitter:description" content="Geodesist and postgraduate researcher in GNSS Interferometric Reflectometry at the University of Newcastle.">
+  <meta name="twitter:image" content="https://georgetownsend.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto 40px; /* Added bottom margin of 40px */
-      max-width: 50%;
-      border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 42px;
-      padding: 40px 0 20px;
-      position: relative;
-      font-weight: 700;
-      color: #222;
-    }
-
-    h1:after {
-      content: "Geospatial Developer";
-      display: block;
-      font-size: 18px;
-      letter-spacing: 1px;
-      font-weight: normal;
-      color: #555;
-      margin-top: 5px;
-      text-transform: none;
-    }
-
-    h1 span {
-      color: #0056b3;
-    }
-
-    h2 {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .summary {
-      max-width: 75%;
-      margin: 0 auto;
-      border: 1px solid #e0e0e0;
-      padding: 20px;
-      border-radius: 5px;
-      text-align: justify;
-    }
-
-    .section-divider {
-      height: 2px;
-      background: linear-gradient(to right, transparent, #dddddd, transparent);
-      margin: 50px auto 40px;
-      width: 80%;
-    }
-
-    .project-list {
-      display: flex;
-      justify-content: center; /* center the cards */
-      flex-wrap: nowrap;
-      overflow-x: auto; /* allow horizontal scrolling if needed */
-      padding: 10px 0 30px 0;
-    }
-
-    .project-list .card {
-      width: calc(25% - 20px);  /* divide the width into four cards with a 10px margin */
-      margin: 10px;
-      border: 1px solid #dddddd;
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background-color: #fafafa;
-    }
-
-    .project-list .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    .project-list .card h3 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      min-height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project-list .card a {
-      font-size: 16px;
-      color: #0056b3;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid #0056b3;
-      border-radius: 4px;
-    }
-
-    .project-list .card a:hover {
-      background-color: #0056b3;
-      color: white;
-    }
-
-    .contact-section {
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 50px;
-      border-top: 1px solid #dee2e6;
-    }
-
-    .contact-section h2 {
-      font-size: 24px;
-      margin: 0 0 15px 0;
-      color: #343a40;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .contact-links a {
-      font-size: 16px;
-      color: #0056b3;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-    }
-
-    .contact-links a i {
-      margin-right: 8px;
-    }
-
-    .contact-links a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      color: #0033a0;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      font-size: 12px; /*small text */
-      padding: 10px;
-    }
-
-  </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>George Townsend</h1>
-    <img src="generated_image.png" alt="An AI generated picture of a globe and semi-hallucinated geospatial things">
-    <p class="summary">Geospatial professional with expertise in GNSS technology, spatial data processing, and Python development
-across industry and academia. Passionate about the intersection of geography, measurement, and technology.</p>
+  <header>
+    <nav>
+      <a href="/" class="site-name" aria-label="George Townsend — Home">GT</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/resume.pdf">Resume</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/GeorgeTownsendd" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:george@georgetownsend.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <div class="section-divider"></div>
-
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="card">
-        <h3>Explore the Mandelbrot and Julia sets with Python and PyGame</h3>
-        <a href="https://github.com/GeorgeTownsendd/cudabrot" target="_blank">Github <i class="fab fa-github"></i></a>
-      </div>
-      <div class="card">
-        <h3>Least squares survey network adjustment in Python</h3>
-        <a href="https://github.com/GeorgeTownsendd/SurveyPy" target="_blank">Github <i class="fab fa-github"></i></a>
-      </div>
-      <div class="card">
-        <h3>Archive, visualise, and analyse Reddit /r/place events</h3>
-        <a href="https://github.com/GeorgeTownsendd/PlaceTimelapseTool" target="_blank">Github <i class="fab fa-github"></i></a>
-      </div>
-      <div class="card">
-        <h3>Print navigation charts using OpenStreetMap and LaTeX</h3>
-        <a href="https://http.cat/401" target="_blank">Github <i class="fab fa-github"></i></a>
-      </div>
-    </div>
-
-    <div class="contact-section">
-      <h2>Contact Me</h2>
-      <div class="contact-links">
-        <a href="mailto:george@georgetownsend.com"><i class="fas fa-envelope"></i> george@georgetownsend.com</a>
-        <a href="http://www.georgetownsend.com/resume" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-      </div>
-    </div>
+  <div class="signal-wave" aria-hidden="true">
+    <svg class="signal-wave-svg" preserveAspectRatio="none"><path id="signal-wave-path" d=""/></svg>
   </div>
+
+  <main>
+    <section class="profile">
+      <img src="/warkworth_selfie.jpg" alt="George Townsend at the Warkworth GNSS site" class="profile-photo">
+      <div class="profile-text">
+        <h1>George Townsend</h1>
+        <p class="tagline">Geodesy · GNSS-IR</p>
+      </div>
+    </section>
+
+    <section class="bio">
+      <p>
+        Geodesist and postgraduate researcher in GNSS-IR at the University of Newcastle. Visiting scholar to The Ohio State University Department of Geodetic Science. Passionate about the intersection of geography, measurement, and technology.
+      </p>
+    </section>
+
+    <section class="section">
+      <span class="label">Interests</span>
+      <p class="interests-line">GNSS · Remote sensing · Signal processing · Scientific computing · Cartography</p>
+    </section>
+
+    <section class="section">
+      <span class="label">Pinned Projects</span>
+      <ul class="project-list">
+        <li>
+          <span class="proj-title"><a href="https://github.com/kristinemlarson/gnssrefl" target="_blank" rel="noopener">gnssrefl</a></span>
+          &mdash; GNSS-IR software in Python. Contributor.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> George Townsend</p>
+  </footer>
+  <script>document.getElementById('year').textContent = String(new Date().getFullYear());</script>
+  <script>
+  // Header signal-wave: fundamental (drifts left) + 2nd harmonic (drifts right),
+  // phase-walking independently. y(x,t) = mid - A1·sin(2π(x+v1·t)/L1) - A2·sin(2π(x-v2·t)/L2)
+  (function () {
+    var path = document.getElementById('signal-wave-path');
+    var svg  = document.querySelector('.signal-wave-svg');
+    if (!path || !svg) return;
+    var MID = 12, A1 = 6, L1 = 120, V1 = 5;     // fundamental, leftward (px/s)
+    var      A2 = 1.5, L2 = 60,  V2 = 3;        // 2nd harmonic, leftward (px/s)
+    var STEP = 3;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function frame() {
+      // Phase from wall-clock time so the wave syncs across refreshes / visitors.
+      var dt = Date.now() / 1000;
+      var W = Math.ceil(svg.clientWidth) + STEP;
+      var d = '';
+      for (var x = 0; x <= W; x += STEP) {
+        var y = MID
+          - A1 * Math.sin(2 * Math.PI * (x + V1 * dt) / L1)
+          - A2 * Math.sin(2 * Math.PI * (x + V2 * dt) / L2);
+        d += (x === 0 ? 'M' : 'L') + x + ',' + y.toFixed(2) + ' ';
+      }
+      d += 'L' + W + ',0 L0,0 Z';
+      path.setAttribute('d', d);
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+  </script>
 </body>
 </html>
